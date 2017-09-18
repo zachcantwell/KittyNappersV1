@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour {
             m_enemiesRemainingToSpawn--;
             m_nextSpawnTime = Time.time + m_currentWave.m_timeBetweenSpawns;
 
-            Enemy spawnedEnemy = Instantiate(m_Enemy, Vector3.zero, Quaternion.identity) as Enemy;
+            Enemy spawnedEnemy = Instantiate(m_Enemy, transform.position, Quaternion.identity) as Enemy;
             spawnedEnemy.m_OnDeath += OnEnemyDeath;
         }
     }
